@@ -3,6 +3,8 @@ import { AsyncStorage } from 'react-native';
 import { Container, Content, Button, Text, Form, Item, Input, Label } from 'native-base';
 
 export default class Login  extends Component {
+	
+	/* On the render()  method of your React Native component, create a Form with input fields for Username and Password. */
 
 	this.state = {
 		validating: false
@@ -34,6 +36,9 @@ export default class Login  extends Component {
 			</Container>
 		)
 	}
+	
+	
+	/* So now that we have a token, we pass it back to our mobile app as a response. Our mobile app should then be able to receive and store the token (and any other data you want to include) into our mobile device storage via AsyncStorage , this way, every time the user opens your mobile app, our application will just check the storage if it has a currently logged-in user (Persistent Login). */
 
 	validate(){
 		this.setState({ validating: true });
